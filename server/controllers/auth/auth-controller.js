@@ -26,8 +26,11 @@ const registerUser = async (req, res) => {
       success: true,
       message: "Registration successful",
     });
+//     Failed to load resource: the server responded with a status of 500 ()
+// index-BfpJl-X4.js:309 false null
+// index-BfpJl-X4.js:309 /auth/register false
   } catch (e) {
-    console.log(e);
+    console.error("REGISTER ERROR:", e);
     res.status(500).json({
       success: false,
       message: "Some error occured",
